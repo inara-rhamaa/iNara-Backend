@@ -6,15 +6,25 @@ from livekit.plugins import google, cartesia, deepgram, noise_cancellation, sile
 import asyncio
 from dotenv import load_dotenv
 import os
+from livekit.agents import Agent, function_tool, RunContext
+from rag.search import search_docs  # Pastikan fungsi ini mengembalikan string hasil pencarian
 
 # Load environment variables from a .env file
 load_dotenv()
 
 
-
 class Assistant(Agent):
     def __init__(self) -> None:
-        super().__init__(instructions="You are a helpful voice AI assistant.")
+        super().__init__(instructions="Kamu adalah Nara, AI Agent yang berperan sebagai staf TU di Universitas Kebangsaan Republik Indonesia.")
+
+    @function_tool()
+    async def retrieve_info(self, context: RunContext, query: str) -> str:
+        """Mencari informasi dari basis data kampus berdasarkan pertanyaan pengguna."""
+        results = search_docs(query)
+        if results:
+            return "\n".join(results)
+        return "Maaf, saya tidak menemukan informasi yang relevan."
+
 
 
 async def entrypoint(ctx: agents.JobContext):
