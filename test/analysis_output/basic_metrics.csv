@@ -1,0 +1,2 @@
+total_questions,rag_accuracy_verdict,og_accuracy_verdict,rag_accuracy_boolean,og_accuracy_boolean,rag_avg_score,rag_median_score,rag_std_score,og_avg_score,og_median_score,og_std_score
+51,31.372549019607842,11.76470588235294,0.0,0.0,0.3143725490196078,0.0,0.4681924801098076,0.11776470588235295,0.0,0.32535338253875856
