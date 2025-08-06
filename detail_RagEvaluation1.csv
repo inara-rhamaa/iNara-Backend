@@ -1,0 +1,51 @@
+No,Pertanyaan,RAG_Benar,OG_Benar,Kategori
+1,Apa singkatan resmi Universitas Kebangsaan Republik Indonesia?,TRUE,TRUE,Keduanya Benar
+2,Di kota mana UKRI berada?,TRUE,FALSE,Hanya RAG Benar
+3,Di provinsi mana UKRI berlokasi?,TRUE,FALSE,Hanya RAG Benar
+4,Apa alamat lengkap kampus UKRI?,TRUE,FALSE,Hanya RAG Benar
+5,UKRI berstatus perguruan tinggi negeri atau swasta?,TRUE,TRUE,Keduanya Benar
+6,Apa nama yayasan penyelenggara UKRI?,TRUE,FALSE,Hanya RAG Benar
+7,Siapa ketua Yayasan Pendidikan Kebangsaan yang menaungi UKRI?,TRUE,FALSE,Hanya RAG Benar
+8,Siapa rektor UKRI saat ini?,TRUE,FALSE,Hanya RAG Benar
+9,Siapa Wakil Rektor I UKRI bidang akademik?,TRUE,FALSE,Hanya RAG Benar
+10,"Siapa Wakil Rektor II UKRI bidang umum, kepegawaian dan keuangan?",TRUE,FALSE,Hanya RAG Benar
+11,Siapa Wakil Rektor III UKRI bidang kemahasiswaan dan alumni?,TRUE,FALSE,Hanya RAG Benar
+12,Siapa Wakil Rektor IV UKRI bidang kerjasama?,TRUE,FALSE,Hanya RAG Benar
+13,Dari institusi mana UKRI dikembangkan pada awal pendiriannya?,TRUE,FALSE,Hanya RAG Benar
+14,Kapan Institut Teknologi Adityawarman (ITA) didirikan?,TRUE,FALSE,Hanya RAG Benar
+15,Siapa yang mendirikan Institut Teknologi Adityawarman (ITA) pada awalnya?,TRUE,FALSE,Hanya RAG Benar
+16,Di jalan mana kampus ITA pertama kali berada?,TRUE,FALSE,Hanya RAG Benar
+17,Sejak kapan ITA berada di bawah naungan Yayasan Pendidikan Kebangsaan?,TRUE,FALSE,Hanya RAG Benar
+18,Di jalan mana kampus berada sebelum pindah ke Terusan Halimun?,FALSE,FALSE,Keduanya Salah
+19,Sejak tahun akademik berapa UKRI memiliki kampus di Jl. Terusan Halimun?,TRUE,FALSE,Hanya RAG Benar
+20,Siapa tokoh yang menjadi inspirasi cita-cita luhur pendirian UKRI?,TRUE,FALSE,Hanya RAG Benar
+21,Berdasarkan SK Menteri nomor berapa ITA berubah menjadi Universitas Kebangsaan?,TRUE,FALSE,Hanya RAG Benar
+22,Pada tahun berapa ITA resmi berubah menjadi Universitas Kebangsaan?,TRUE,FALSE,Hanya RAG Benar
+23,Kapan Universitas Kebangsaan berubah nama menjadi UKRI?,TRUE,FALSE,Hanya RAG Benar
+24,Berdasarkan Keputusan Menteri nomor berapa UK berubah nama menjadi UKRI?,FALSE,FALSE,Keduanya Salah
+25,Apa kepanjangan FIKSI di UKRI?,TRUE,FALSE,Hanya RAG Benar
+26,Siapa dekan Fakultas Ilmu Komputer dan Sistem Informasi UKRI?,TRUE,FALSE,Hanya RAG Benar
+27,Program studi apa saja yang ada di FIKSI UKRI?,TRUE,TRUE,Keduanya Benar
+28,Siapa ketua program studi Teknik Informatika UKRI?,TRUE,FALSE,Hanya RAG Benar
+29,Siapa ketua program studi Sistem Informasi UKRI?,TRUE,FALSE,Hanya RAG Benar
+30,Lembaga apa yang mengakreditasi program studi Teknik Informatika UKRI?,TRUE,FALSE,Hanya RAG Benar
+31,Apa status akreditasi program studi Teknik Informatika UKRI?,TRUE,FALSE,Hanya RAG Benar
+32,Lembaga apa yang mengakreditasi program studi Sistem Informasi UKRI?,TRUE,TRUE,Keduanya Benar
+33,Apa status akreditasi program studi Sistem Informasi UKRI?,TRUE,TRUE,Keduanya Benar
+34,Pada tahun berapa Fakultas Telematika berubah nama menjadi FIKSI?,TRUE,FALSE,Hanya RAG Benar
+35,Apa nama awal fakultas yang menaungi program studi Teknik Informatika dan Sistem Informasi?,TRUE,FALSE,Hanya RAG Benar
+36,Apa kepanjangan FTI di UKRI?,TRUE,FALSE,Hanya RAG Benar
+37,Siapa dekan Fakultas Teknologi Industri UKRI?,TRUE,FALSE,Hanya RAG Benar
+38,Program studi apa saja yang ada di FTI UKRI?,TRUE,FALSE,Hanya RAG Benar
+39,Siapa ketua program studi Teknik Industri di FTI UKRI?,TRUE,FALSE,Hanya RAG Benar
+40,Siapa ketua program studi Teknik Mesin di FTI UKRI?,TRUE,FALSE,Hanya RAG Benar
+41,Siapa ketua program studi Teknik Elektro di FTI UKRI?,TRUE,FALSE,Hanya RAG Benar
+42,Apa kepanjangan FTSP di UKRI?,TRUE,TRUE,Keduanya Benar
+43,Siapa dekan Fakultas Teknik Sipil dan Perencanaan UKRI?,FALSE,FALSE,Keduanya Salah
+44,Program studi apa saja yang ada di FTSP UKRI?,TRUE,FALSE,Hanya RAG Benar
+45,Siapa ketua program studi Arsitektur di FTSP UKRI?,TRUE,FALSE,Hanya RAG Benar
+46,Siapa ketua program studi Teknik Lingkungan di FTSP UKRI?,TRUE,FALSE,Hanya RAG Benar
+47,Kapan FTSP UKRI berdiri menurut sambutan dekan?,TRUE,FALSE,Hanya RAG Benar
+48,Apa visi FIKSI UKRI?,FALSE,FALSE,Keduanya Salah
+49,Berapa jumlah misi yang dimiliki FIKSI UKRI?,FALSE,FALSE,Keduanya Salah
+50,Apa visi program studi Sistem Informasi UKRI?,TRUE,FALSE,Hanya RAG Benar

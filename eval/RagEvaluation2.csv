@@ -1,0 +1,51 @@
+pertanyaan,rag_benar,og_benar
+Apa singkatan resmi Universitas Kebangsaan Republik Indonesia?,TRUE,TRUE
+Di kota mana UKRI berada?,TRUE,FALSE
+Di provinsi mana UKRI berlokasi?,TRUE,TRUE
+Apa alamat lengkap kampus UKRI?,TRUE,FALSE
+UKRI berstatus perguruan tinggi negeri atau swasta?,TRUE,TRUE
+Apa nama yayasan penyelenggara UKRI?,TRUE,FALSE
+Siapa ketua Yayasan Pendidikan Kebangsaan yang menaungi UKRI?,TRUE,FALSE
+Siapa rektor UKRI saat ini?,TRUE,FALSE
+Siapa Wakil Rektor I UKRI bidang akademik?,TRUE,FALSE
+"Siapa Wakil Rektor II UKRI bidang umum, kepegawaian dan keuangan?",TRUE,FALSE
+Siapa Wakil Rektor III UKRI bidang kemahasiswaan dan alumni?,TRUE,FALSE
+Siapa Wakil Rektor IV UKRI bidang kerjasama?,TRUE,FALSE
+Dari institusi mana UKRI dikembangkan pada awal pendiriannya?,TRUE,FALSE
+Kapan Institut Teknologi Adityawarman (ITA) didirikan?,TRUE,FALSE
+Siapa yang mendirikan Institut Teknologi Adityawarman (ITA) pada awalnya?,TRUE,FALSE
+Di jalan mana kampus ITA pertama kali berada?,TRUE,FALSE
+Sejak kapan ITA berada di bawah naungan Yayasan Pendidikan Kebangsaan?,TRUE,FALSE
+Di jalan mana kampus berada sebelum pindah ke Terusan Halimun?,FALSE,FALSE
+Sejak tahun akademik berapa UKRI memiliki kampus di Jl. Terusan Halimun?,TRUE,FALSE
+Siapa tokoh yang menjadi inspirasi cita-cita luhur pendirian UKRI?,TRUE,FALSE
+Berdasarkan SK Menteri nomor berapa ITA berubah menjadi Universitas Kebangsaan?,TRUE,FALSE
+Pada tahun berapa ITA resmi berubah menjadi Universitas Kebangsaan?,TRUE,FALSE
+Kapan Universitas Kebangsaan berubah nama menjadi UKRI?,TRUE,FALSE
+Berdasarkan Keputusan Menteri nomor berapa UK berubah nama menjadi UKRI?,FALSE,FALSE
+Apa kepanjangan FIKSI di UKRI?,TRUE,FALSE
+Siapa dekan Fakultas Ilmu Komputer dan Sistem Informasi UKRI?,TRUE,FALSE
+Program studi apa saja yang ada di FIKSI UKRI?,TRUE,TRUE
+Siapa ketua program studi Teknik Informatika UKRI?,TRUE,FALSE
+Siapa ketua program studi Sistem Informasi UKRI?,TRUE,FALSE
+Lembaga apa yang mengakreditasi program studi Teknik Informatika UKRI?,TRUE,FALSE
+Apa status akreditasi program studi Teknik Informatika UKRI?,TRUE,FALSE
+Lembaga apa yang mengakreditasi program studi Sistem Informasi UKRI?,TRUE,TRUE
+Apa status akreditasi program studi Sistem Informasi UKRI?,TRUE,FALSE
+Pada tahun berapa Fakultas Telematika berubah nama menjadi FIKSI?,TRUE,FALSE
+Apa nama awal fakultas yang menaungi program studi Teknik Informatika dan Sistem Informasi?,TRUE,FALSE
+Apa kepanjangan FTI di UKRI?,TRUE,FALSE
+Siapa dekan Fakultas Teknologi Industri UKRI?,TRUE,FALSE
+Program studi apa saja yang ada di FTI UKRI?,TRUE,FALSE
+Siapa ketua program studi Teknik Industri di FTI UKRI?,TRUE,FALSE
+Siapa ketua program studi Teknik Mesin di FTI UKRI?,TRUE,FALSE
+Siapa ketua program studi Teknik Elektro di FTI UKRI?,TRUE,FALSE
+Apa kepanjangan FTSP di UKRI?,TRUE,TRUE
+Siapa dekan Fakultas Teknik Sipil dan Perencanaan UKRI?,FALSE,FALSE
+Program studi apa saja yang ada di FTSP UKRI?,TRUE,FALSE
+Siapa ketua program studi Arsitektur di FTSP UKRI?,TRUE,FALSE
+Siapa ketua program studi Teknik Lingkungan di FTSP UKRI?,TRUE,FALSE
+Kapan FTSP UKRI berdiri menurut sambutan dekan?,TRUE,FALSE
+Apa visi FIKSI UKRI?,FALSE,FALSE
+Berapa jumlah misi yang dimiliki FIKSI UKRI?,FALSE,FALSE
+Apa visi program studi Sistem Informasi UKRI?,TRUE,FALSE

@@ -1,0 +1,1199 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Analisis Kinerja RAG vs OG - Visualisasi</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            :root {
+                --primary: #4361ee;
+                --secondary: #3f37c9;
+                --success: #4cc9f0;
+                --danger: #f72585;
+                --warning: #f8961e;
+                --info: #4895ef;
+                --light: #f8f9fa;
+                --dark: #212529;
+                --rag-color: #4361ee;
+                --og-color: #f72585;
+                --both-color: #4cc9f0;
+                --only-rag-color: #4895ef;
+                --only-og-color: #f8961e;
+                --both-false-color: #8d99ae;
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f0f2f5;
+                color: #333;
+                line-height: 1.6;
+            }
+            
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            header {
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+                color: white;
+                padding: 25px;
+                text-align: center;
+                border-radius: 12px;
+                margin-bottom: 25px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+                opacity: 0.9;
+            }
+            
+            .upload-section {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                color: var(--dark);
+                padding-bottom: 10px;
+                border-bottom: 2px solid #e9ecef;
+            }
+            
+            .upload-area {
+                border: 3px dashed #ced4da;
+                border-radius: 10px;
+                padding: 40px;
+                text-align: center;
+                margin-bottom: 25px;
+                background-color: #f8f9fa;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            
+            .upload-area:hover, .upload-area.highlight {
+                border-color: var(--primary);
+                background-color: #e7f3ff;
+            }
+            
+            .upload-icon {
+                font-size: 3rem;
+                color: var(--primary);
+                margin-bottom: 15px;
+            }
+            
+            .file-list {
+                margin-top: 20px;
+                max-height: 200px;
+                overflow-y: auto;
+                border: 1px solid #e9ecef;
+                border-radius: 8px;
+                padding: 15px;
+            }
+            
+            .file-item {
+                padding: 12px;
+                background: #e9ecef;
+                border-radius: 6px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .remove-file {
+                background: var(--danger);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                padding: 6px 12px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            
+            .remove-file:hover {
+                background: #d0004f;
+            }
+            
+            .btn {
+                background: var(--primary);
+                color: white;
+                border: none;
+                border-radius: 6px;
+                padding: 12px 25px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-weight: 600;
+            }
+            
+            .btn:hover {
+                background: var(--secondary);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .btn:disabled {
+                background: #adb5bd;
+                cursor: not-allowed;
+                transform: none;
+                box-shadow: none;
+            }
+            
+            .btn-secondary {
+                background: #6c757d;
+            }
+            
+            .btn-secondary:hover {
+                background: #5a6268;
+            }
+            
+            .dashboard {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .card {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                padding: 25px;
+                transition: transform 0.3s ease;
+            }
+            
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            }
+            
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .stat-card {
+                background: #f8f9fa;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+                border-left: 4px solid var(--primary);
+            }
+            
+            .stat-card.rag {
+                border-left-color: var(--rag-color);
+            }
+            
+            .stat-card.og {
+                border-left-color: var(--og-color);
+            }
+            
+            .stat-card.both {
+                border-left-color: var(--both-color);
+            }
+            
+            .stat-card h3 {
+                font-size: 1rem;
+                margin: 0 0 10px 0;
+                color: #6c757d;
+            }
+            
+            .stat-value {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: var(--dark);
+            }
+            
+            .stat-value.small {
+                font-size: 1.8rem;
+            }
+            
+            .chart-container {
+                height: 300px;
+                position: relative;
+                margin-top: 20px;
+            }
+            
+            .comparison-section {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            .comparison-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 25px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .controls {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            select {
+                padding: 10px 15px;
+                border-radius: 6px;
+                border: 1px solid #ced4da;
+                background: white;
+                font-size: 1rem;
+            }
+            
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+            }
+            
+            th, td {
+                border: 1px solid #e9ecef;
+                padding: 15px;
+                text-align: left;
+            }
+            
+            th {
+                background-color: #f8f9fa;
+                font-weight: 600;
+                position: sticky;
+                top: 0;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #f8f9fa;
+            }
+            
+            .category-badge {
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                display: inline-block;
+            }
+            
+            .both-true {
+                background-color: #c6f6d5;
+                color: #22543d;
+            }
+            
+            .only-rag {
+                background-color: #bee3f8;
+                color: #2a4365;
+            }
+            
+            .only-og {
+                background-color: #fed7d7;
+                color: #742a2a;
+            }
+            
+            .both-false {
+                background-color: #e2e8f0;
+                color: #4a5568;
+            }
+            
+            .summary {
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                color: white;
+                padding: 30px;
+                border-radius: 12px;
+                margin-top: 20px;
+            }
+            
+            .summary h2 {
+                margin-top: 0;
+            }
+            
+            .file-comparison {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+                margin-top: 20px;
+            }
+            
+            .file-card {
+                background: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                border-top: 4px solid var(--primary);
+            }
+            
+            .file-card.rag {
+                border-top-color: var(--rag-color);
+            }
+            
+            .file-card.og {
+                border-top-color: var(--og-color);
+            }
+            
+            .file-card h3 {
+                margin-top: 0;
+                color: var(--dark);
+                border-bottom: 1px solid #e9ecef;
+                padding-bottom: 12px;
+            }
+            
+            .hidden {
+                display: none;
+            }
+            
+            .message {
+                padding: 15px;
+                border-radius: 6px;
+                margin-top: 15px;
+            }
+            
+            .error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+            
+            .success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            
+            .charts-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                gap: 25px;
+                margin-top: 25px;
+            }
+            
+            @media (max-width: 768px) {
+                .charts-container {
+                    grid-template-columns: 1fr;
+                }
+                
+                .dashboard {
+                    grid-template-columns: 1fr;
+                }
+                
+                .comparison-header {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                
+                .controls {
+                    justify-content: center;
+                }
+            }
+            
+            .chart-card {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                padding: 25px;
+            }
+            
+            .chart-card h3 {
+                margin-top: 0;
+                color: var(--dark);
+                text-align: center;
+                font-size: 1.3rem;
+            }
+            
+            .percentage {
+                font-size: 0.9rem;
+                color: #6c757d;
+                margin-top: 5px;
+            }
+            
+            .legend {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .legend-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>📊 Dashboard Analisis Kinerja RAG vs OG</h1>
+                <p class="subtitle">Perbandingan akurasi jawaban aplikasi RAG dengan model LLM original</p>
+            </header>
+    
+            <div class="upload-section">
+                <h2 class="section-title">📁 Upload File Evaluasi</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">⬆️</div>
+                    <h3>Seret dan lepas file CSV di sini</h3>
+                    <p>atau klik untuk memilih file</p>
+                    <p><em>(Anda dapat mengupload lebih dari 2 file untuk perbandingan)</em></p>
+                    <input type="file" id="fileInput" multiple accept=".csv" class="hidden">
+                </div>
+                <div class="file-list" id="fileList"></div>
+                <div id="uploadMessage"></div>
+                <button id="processBtn" class="btn" disabled>🔍 Proses File</button>
+            </div>
+    
+            <div id="analysisSection" class="hidden">
+                <div class="dashboard">
+                    <div class="card">
+                        <h2 class="section-title">📈 Statistik Kinerja Utama</h2>
+                        <div class="controls" style="margin-bottom: 20px;">
+                            <label for="mainFileSelect">Pilih File:</label>
+                            <select id="mainFileSelect"></select>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h3>Total Pertanyaan</h3>
+                                <div class="stat-value" id="totalQuestions">0</div>
+                            </div>
+                            <div class="stat-card rag">
+                                <h3>RAG Benar</h3>
+                                <div class="stat-value" id="ragTrue">0</div>
+                                <div class="percentage" id="ragTruePercent">0%</div>
+                            </div>
+                            <div class="stat-card og">
+                                <h3>OG Benar</h3>
+                                <div class="stat-value" id="ogTrue">0</div>
+                                <div class="percentage" id="ogTruePercent">0%</div>
+                            </div>
+                            <div class="stat-card both">
+                                <h3>Keduanya Benar</h3>
+                                <div class="stat-value small" id="bothTrue">0</div>
+                                <div class="percentage" id="bothTruePercent">0%</div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <h2 class="section-title">🍩 Distribusi Kategori Jawaban</h2>
+                        <div class="chart-container">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h3>Hanya RAG Benar</h3>
+                                <div class="stat-value small" id="onlyRagTrue">0</div>
+                                <div class="percentage" id="onlyRagTruePercent">0%</div>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Hanya OG Benar</h3>
+                                <div class="stat-value small" id="onlyOgTrue">0</div>
+                                <div class="percentage" id="onlyOgTruePercent">0%</div>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Keduanya Salah</h3>
+                                <div class="stat-value small" id="bothFalse">0</div>
+                                <div class="percentage" id="bothFalsePercent">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="comparison-section">
+                    <h2 class="section-title">📊 Grafik Perbandingan Side-by-Side</h2>
+                    <div class="charts-container">
+                        <div class="chart-card">
+                            <h3>📊 Perbandingan Jumlah Jawaban Benar</h3>
+                            <div class="chart-container">
+                                <canvas id="sideBySidePerformanceChart"></canvas>
+                            </div>
+                            <div class="legend" id="performanceLegend"></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>🥧 Perbandingan Distribusi Kategori</h3>
+                            <div class="chart-container">
+                                <canvas id="sideBySideCategoryChart"></canvas>
+                            </div>
+                            <div class="legend" id="categoryLegend"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="comparison-section">
+                    <div class="comparison-header">
+                        <h2 class="section-title">📋 Analisis Detail Data</h2>
+                        <div class="controls">
+                            <label for="detailFileSelect">Pilih File:</label>
+                            <select id="detailFileSelect"></select>
+                        </div>
+                    </div>
+                    <div style="max-height: 500px; overflow-y: auto;">
+                        <table id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Pertanyaan</th>
+                                    <th>RAG Benar</th>
+                                    <th>OG Benar</th>
+                                    <th>Kategori</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <!-- Data akan diisi oleh JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="comparison-section">
+                    <h2 class="section-title">📋 Perbandingan File</h2>
+                    <div class="file-comparison" id="fileComparison">
+                        <!-- Kartu perbandingan akan diisi oleh JavaScript -->
+                    </div>
+                </div>
+    
+                <div class="summary">
+                    <h2>🏆 Kesimpulan Analisis</h2>
+                    <p id="summaryText">Upload dan proses file untuk melihat kesimpulan analisis.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            // Variabel global
+            let uploadedFiles = [];
+            let processedData = {};
+            let performanceChart, categoryChart, sideBySidePerformanceChart, sideBySideCategoryChart;
+    
+            // Inisialisasi elemen
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const fileList = document.getElementById('fileList');
+            const processBtn = document.getElementById('processBtn');
+            const uploadMessage = document.getElementById('uploadMessage');
+            const analysisSection = document.getElementById('analysisSection');
+            const mainFileSelect = document.getElementById('mainFileSelect');
+            const detailFileSelect = document.getElementById('detailFileSelect');
+    
+            // Event listeners untuk drag and drop
+            uploadArea.addEventListener('click', () => fileInput.click());
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('highlight');
+            });
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('highlight');
+            });
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('highlight');
+                handleFiles(e.dataTransfer.files);
+            });
+    
+            // Event listener untuk input file
+            fileInput.addEventListener('change', (e) => {
+                handleFiles(e.target.files);
+            });
+    
+            // Event listener untuk tombol proses
+            processBtn.addEventListener('click', processFiles);
+    
+            // Fungsi untuk menangani file yang diupload
+            function handleFiles(files) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    if (file.name.endsWith('.csv')) {
+                        // Cek duplikat
+                        if (!uploadedFiles.some(f => f.name === file.name)) {
+                            uploadedFiles.push(file);
+                        }
+                    }
+                }
+                updateFileList();
+                processBtn.disabled = uploadedFiles.length === 0;
+            }
+    
+            // Fungsi untuk memperbarui daftar file
+            function updateFileList() {
+                fileList.innerHTML = '';
+                uploadedFiles.forEach((file, index) => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    fileItem.innerHTML = '<span>📄 ' + file.name + '</span><button class="remove-file" onclick="removeFile(' + index + ')">Hapus</button>';
+                    fileList.appendChild(fileItem);
+                });
+            }
+    
+            // Fungsi untuk menghapus file
+            function removeFile(index) {
+                uploadedFiles.splice(index, 1);
+                updateFileList();
+                processBtn.disabled = uploadedFiles.length === 0;
+            }
+    
+            // Fungsi untuk memproses file
+            async function processFiles() {
+                if (uploadedFiles.length === 0) return;
+    
+                uploadMessage.innerHTML = '<div class="message success">🔍 Memproses file...</div>';
+                processedData = {};
+    
+                try {
+                    // Proses setiap file
+                    for (const file of uploadedFiles) {
+                        const content = await readFile(file);
+                        const data = parseCSV(content);
+                        processedData[file.name] = data;
+                    }
+    
+                    uploadMessage.innerHTML = '<div class="message success">✅ File berhasil diproses!</div>';
+                    
+                    // Tampilkan bagian analisis
+                    analysisSection.classList.remove('hidden');
+                    
+                    // Inisialisasi dropdown
+                    populateFileSelects();
+                    
+                    // Tampilkan data default
+                    if (uploadedFiles.length > 0) {
+                        const defaultFile = uploadedFiles[0].name;
+                        displayStats(defaultFile);
+                        populateTable(defaultFile);
+                        updateCharts(processedData[defaultFile]);
+                        populateComparison();
+                        updateSideBySideCharts();
+                    }
+                    
+                } catch (error) {
+                    uploadMessage.innerHTML = '<div class="message error">❌ Error memproses file: ' + error.message + '</div>';
+                    console.error(error);
+                }
+            }
+    
+            // Fungsi untuk membaca file
+            function readFile(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.onerror = (e) => reject(new Error('Gagal membaca file'));
+                    reader.readAsText(file);
+                });
+            }
+    
+            // Fungsi untuk mem-parsing CSV
+            function parseCSV(csv) {
+                const lines = csv.trim().split('\n');
+                const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+                
+                // Validasi header
+                if (headers.length < 3 || headers[0] !== 'pertanyaan' || headers[1] !== 'rag_benar' || headers[2] !== 'og_benar') {
+                    throw new Error('Format CSV tidak valid. Header harus: pertanyaan,rag_benar,og_benar');
+                }
+                
+                const data = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (line) {
+                        // Split dengan regex untuk menangani koma dalam tanda kutip
+                        const values = line.match(/(".*?"|[^,]+)(?=\s*,|\s*$)/g) || [];
+                        const row = values.map(v => v.trim().replace(/^"(.*)"$/, '$1'));
+                        
+                        if (row.length >= 3) {
+                            data.push([
+                                row[0], // pertanyaan
+                                row[1].toUpperCase(), // rag_benar
+                                row[2].toUpperCase()  // og_benar
+                            ]);
+                        }
+                    }
+                }
+                return data;
+            }
+    
+            // Fungsi untuk mengisi dropdown file
+            function populateFileSelects() {
+                mainFileSelect.innerHTML = '';
+                detailFileSelect.innerHTML = '';
+                
+                Object.keys(processedData).forEach(filename => {
+                    const option1 = document.createElement('option');
+                    option1.value = filename;
+                    option1.textContent = filename;
+                    mainFileSelect.appendChild(option1);
+                    
+                    const option2 = document.createElement('option');
+                    option2.value = filename;
+                    option2.textContent = filename;
+                    detailFileSelect.appendChild(option2);
+                });
+                
+                // Event listeners untuk perubahan dropdown
+                mainFileSelect.addEventListener('change', (e) => {
+                    displayStats(e.target.value);
+                    updateCharts(processedData[e.target.value]);
+                });
+                
+                detailFileSelect.addEventListener('change', (e) => {
+                    populateTable(e.target.value);
+                });
+            }
+    
+            // Fungsi untuk menghitung statistik
+            function calculateStats(dataset) {
+                let total = dataset.length;
+                let ragTrue = 0;
+                let ogTrue = 0;
+                let bothTrue = 0;
+                let onlyRagTrue = 0;
+                let onlyOgTrue = 0;
+                let bothFalse = 0;
+    
+                dataset.forEach(row => {
+                    const rag = row[1] === "TRUE";
+                    const og = row[2] === "TRUE";
+                    
+                    if (rag && og) {
+                        bothTrue++;
+                    } else if (rag && !og) {
+                        onlyRagTrue++;
+                    } else if (!rag && og) {
+                        onlyOgTrue++;
+                    } else {
+                        bothFalse++;
+                    }
+                    
+                    if (rag) ragTrue++;
+                    if (og) ogTrue++;
+                });
+    
+                return {
+                    total, ragTrue, ogTrue, bothTrue, onlyRagTrue, onlyOgTrue, bothFalse,
+                    ragTruePercent: total > 0 ? ((ragTrue / total) * 100).toFixed(1) : 0,
+                    ogTruePercent: total > 0 ? ((ogTrue / total) * 100).toFixed(1) : 0,
+                    bothTruePercent: total > 0 ? ((bothTrue / total) * 100).toFixed(1) : 0,
+                    onlyRagTruePercent: total > 0 ? ((onlyRagTrue / total) * 100).toFixed(1) : 0,
+                    onlyOgTruePercent: total > 0 ? ((onlyOgTrue / total) * 100).toFixed(1) : 0,
+                    bothFalsePercent: total > 0 ? ((bothFalse / total) * 100).toFixed(1) : 0
+                };
+            }
+    
+            // Fungsi untuk menampilkan statistik
+            function displayStats(filename) {
+                const dataset = processedData[filename];
+                if (!dataset) return;
+                
+                const stats = calculateStats(dataset);
+                document.getElementById("totalQuestions").textContent = stats.total;
+                document.getElementById("ragTrue").textContent = stats.ragTrue;
+                document.getElementById("ogTrue").textContent = stats.ogTrue;
+                document.getElementById("bothTrue").textContent = stats.bothTrue;
+                document.getElementById("onlyRagTrue").textContent = stats.onlyRagTrue;
+                document.getElementById("onlyOgTrue").textContent = stats.onlyOgTrue;
+                document.getElementById("bothFalse").textContent = stats.bothFalse;
+                
+                // Update persentase
+                document.getElementById("ragTruePercent").textContent = stats.ragTruePercent + '%';
+                document.getElementById("ogTruePercent").textContent = stats.ogTruePercent + '%';
+                document.getElementById("bothTruePercent").textContent = stats.bothTruePercent + '%';
+                document.getElementById("onlyRagTruePercent").textContent = stats.onlyRagTruePercent + '%';
+                document.getElementById("onlyOgTruePercent").textContent = stats.onlyOgTruePercent + '%';
+                document.getElementById("bothFalsePercent").textContent = stats.bothFalsePercent + '%';
+            }
+    
+            // Fungsi untuk mengisi tabel
+            function populateTable(filename) {
+                const dataset = processedData[filename];
+                if (!dataset) return;
+                
+                const tableBody = document.getElementById("tableBody");
+                tableBody.innerHTML = ""; // Kosongkan tabel
+                
+                dataset.forEach(row => {
+                    const tr = document.createElement("tr");
+                    const rag = row[1] === "TRUE";
+                    const og = row[2] === "TRUE";
+                    
+                    let category = "";
+                    let categoryClass = "";
+                    if (rag && og) {
+                        category = "Keduanya Benar";
+                        categoryClass = "both-true";
+                    } else if (rag && !og) {
+                        category = "Hanya RAG Benar";
+                        categoryClass = "only-rag";
+                    } else if (!rag && og) {
+                        category = "Hanya OG Benar";
+                        categoryClass = "only-og";
+                    } else {
+                        category = "Keduanya Salah";
+                        categoryClass = "both-false";
+                    }
+                    
+                    tr.innerHTML = '<td>' + row[0] + '</td><td>' + row[1] + '</td><td>' + row[2] + '</td><td><span class="category-badge ' + categoryClass + '">' + category + '</span></td>';
+                    tableBody.appendChild(tr);
+                });
+            }
+    
+            // Fungsi untuk memperbarui grafik
+            function updateCharts(dataset) {
+                if (!dataset) return;
+                
+                const stats = calculateStats(dataset);
+                
+                // Update grafik kinerja
+                performanceChart.data.datasets[0].data = [stats.ragTrue, stats.ogTrue, stats.bothTrue];
+                performanceChart.update();
+                
+                // Update grafik kategori
+                categoryChart.data.datasets[0].data = [stats.bothTrue, stats.onlyRagTrue, stats.onlyOgTrue, stats.bothFalse];
+                categoryChart.update();
+            }
+    
+            // Fungsi untuk mengisi perbandingan file
+            function populateComparison() {
+                const comparisonContainer = document.getElementById('fileComparison');
+                comparisonContainer.innerHTML = '';
+                
+                Object.keys(processedData).forEach(filename => {
+                    const dataset = processedData[filename];
+                    const stats = calculateStats(dataset);
+                    
+                    const fileCard = document.createElement('div');
+                    fileCard.className = 'file-card';
+                    fileCard.innerHTML = '<h3>📄 ' + filename + '</h3><p><strong>📊 Total Pertanyaan:</strong> ' + stats.total + '</p><p><strong style="color: var(--rag-color)">🤖 RAG Benar:</strong> ' + stats.ragTrue + ' (' + stats.ragTruePercent + '%)</p><p><strong style="color: var(--og-color)">🧠 OG Benar:</strong> ' + stats.ogTrue + ' (' + stats.ogTruePercent + '%)</p><p><strong style="color: var(--both-color)">✅ Keduanya Benar:</strong> ' + stats.bothTrue + ' (' + stats.bothTruePercent + '%)</p><p><strong style="color: var(--only-rag-color)">🔵 Hanya RAG Benar:</strong> ' + stats.onlyRagTrue + ' (' + stats.onlyRagTruePercent + '%)</p><p><strong style="color: var(--only-og-color)">🟠 Hanya OG Benar:</strong> ' + stats.onlyOgTrue + ' (' + stats.onlyOgTruePercent + '%)</p><p><strong style="color: var(--both-false-color)">❌ Keduanya Salah:</strong> ' + stats.bothFalse + ' (' + stats.bothFalsePercent + '%)</p>';
+                    comparisonContainer.appendChild(fileCard);
+                });
+                
+                // Update kesimpulan
+                updateSummary();
+            }
+    
+            // Fungsi untuk memperbarui grafik side-by-side
+            function updateSideBySideCharts() {
+                // Data untuk grafik perbandingan kinerja
+                const fileNames = Object.keys(processedData);
+                const ragData = [];
+                const ogData = [];
+                const bothData = [];
+                
+                fileNames.forEach(filename => {
+                    const stats = calculateStats(processedData[filename]);
+                    ragData.push(stats.ragTrue);
+                    ogData.push(stats.ogTrue);
+                    bothData.push(stats.bothTrue);
+                });
+                
+                // Update grafik perbandingan kinerja
+                sideBySidePerformanceChart.data.labels = fileNames;
+                sideBySidePerformanceChart.data.datasets[0].data = ragData;
+                sideBySidePerformanceChart.data.datasets[1].data = ogData;
+                sideBySidePerformanceChart.data.datasets[2].data = bothData;
+                sideBySidePerformanceChart.update();
+                
+                // Data untuk grafik perbandingan kategori
+                const categoryData = {
+                    "Keduanya Benar": [],
+                    "Hanya RAG Benar": [],
+                    "Hanya OG Benar": [],
+                    "Keduanya Salah": []
+                };
+                
+                fileNames.forEach(filename => {
+                    const stats = calculateStats(processedData[filename]);
+                    categoryData["Keduanya Benar"].push(stats.bothTrue);
+                    categoryData["Hanya RAG Benar"].push(stats.onlyRagTrue);
+                    categoryData["Hanya OG Benar"].push(stats.onlyOgTrue);
+                    categoryData["Keduanya Salah"].push(stats.bothFalse);
+                });
+                
+                // Update grafik perbandingan kategori
+                sideBySideCategoryChart.data.labels = fileNames;
+                sideBySideCategoryChart.data.datasets[0].data = categoryData["Keduanya Benar"];
+                sideBySideCategoryChart.data.datasets[1].data = categoryData["Hanya RAG Benar"];
+                sideBySideCategoryChart.data.datasets[2].data = categoryData["Hanya OG Benar"];
+                sideBySideCategoryChart.data.datasets[3].data = categoryData["Keduanya Salah"];
+                sideBySideCategoryChart.update();
+                
+                // Update legend
+                updateLegends();
+            }
+    
+            // Fungsi untuk memperbarui legend
+            function updateLegends() {
+                // Legend untuk grafik kinerja
+                const performanceLegend = document.getElementById('performanceLegend');
+                performanceLegend.innerHTML = '<div class="legend-item"><div class="legend-color" style="background-color: rgba(67, 97, 238, 0.7);"></div><span>RAG Benar</span></div><div class="legend-item"><div class="legend-color" style="background-color: rgba(247, 37, 133, 0.7);"></div><span>OG Benar</span></div><div class="legend-item"><div class="legend-color" style="background-color: rgba(76, 201, 240, 0.7);"></div><span>Keduanya Benar</span></div>';
+                
+                // Legend untuk grafik kategori
+                const categoryLegend = document.getElementById('categoryLegend');
+                categoryLegend.innerHTML = '<div class="legend-item"><div class="legend-color" style="background-color: rgba(76, 201, 240, 0.7);"></div><span>Keduanya Benar</span></div><div class="legend-item"><div class="legend-color" style="background-color: rgba(72, 149, 239, 0.7);"></div><span>Hanya RAG Benar</span></div><div class="legend-item"><div class="legend-color" style="background-color: rgba(248, 150, 30, 0.7);"></div><span>Hanya OG Benar</span></div><div class="legend-item"><div class="legend-color" style="background-color: rgba(141, 153, 174, 0.7);"></div><span>Keduanya Salah</span></div>';
+            }
+    
+            // Fungsi untuk memperbarui kesimpulan
+            function updateSummary() {
+                if (Object.keys(processedData).length === 0) return;
+                
+                let bestRagFile = '';
+                let bestRagScore = -1;
+                let bestRagPercent = 0;
+                let bestOgFile = '';
+                let bestOgScore = -1;
+                let bestOgPercent = 0;
+                
+                Object.keys(processedData).forEach(filename => {
+                    const dataset = processedData[filename];
+                    const stats = calculateStats(dataset);
+                    
+                    if (stats.ragTrue > bestRagScore) {
+                        bestRagScore = stats.ragTrue;
+                        bestRagPercent = parseFloat(stats.ragTruePercent);
+                        bestRagFile = filename;
+                    }
+                    
+                    if (stats.ogTrue > bestOgScore) {
+                        bestOgScore = stats.ogTrue;
+                        bestOgPercent = parseFloat(stats.ogTruePercent);
+                        bestOgFile = filename;
+                    }
+                });
+                
+                const summaryText = document.getElementById('summaryText');
+                summaryText.innerHTML = '<p>Berdasarkan analisis file yang diupload:</p><ul><li><strong style="color: var(--rag-color)">🤖 Model RAG</strong> memiliki performa terbaik pada file <strong>' + bestRagFile + '</strong> dengan <strong>' + bestRagScore + ' jawaban benar (' + bestRagPercent + '%)</strong></li><li><strong style="color: var(--og-color)">🧠 Model OG</strong> memiliki performa terbaik pada file <strong>' + bestOgFile + '</strong> dengan <strong>' + bestOgScore + ' jawaban benar (' + bestOgPercent + '%)</strong></li><li>Upload lebih banyak file untuk melihat tren performa model dari waktu ke waktu</li></ul>';
+            }
+    
+            // Inisialisasi grafik saat halaman dimuat
+            window.onload = function() {
+                // Inisialisasi grafik kinerja
+                const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+                performanceChart = new Chart(performanceCtx, {
+                    type: 'bar',
+                     {
+                        labels: ['RAG Benar', 'OG Benar', 'Keduanya Benar'],
+                        datasets: [{
+                            label: 'Jumlah Jawaban Benar',
+                            data: [0, 0, 0],
+                            backgroundColor: [
+                                'rgba(67, 97, 238, 0.7)',
+                                'rgba(247, 37, 133, 0.7)',
+                                'rgba(76, 201, 240, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(67, 97, 238, 1)',
+                                'rgba(247, 37, 133, 1)',
+                                'rgba(76, 201, 240, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': ' + context.raw;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 5
+                                }
+                            }
+                        }
+                    }
+                });
+    
+                // Inisialisasi grafik kategori
+                const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+                categoryChart = new Chart(categoryCtx, {
+                    type: 'doughnut',
+                     {
+                        labels: ['Keduanya Benar', 'Hanya RAG Benar', 'Hanya OG Benar', 'Keduanya Salah'],
+                        datasets: [{
+                            data: [0, 0, 0, 0],
+                            backgroundColor: [
+                                'rgba(76, 201, 240, 0.7)',
+                                'rgba(72, 149, 239, 0.7)',
+                                'rgba(248, 150, 30, 0.7)',
+                                'rgba(141, 153, 174, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(76, 201, 240, 1)',
+                                'rgba(72, 149, 239, 1)',
+                                'rgba(248, 150, 30, 1)',
+                                'rgba(141, 153, 174, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const label = context.label || '';
+                                        const value = context.raw || 0;
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                                        return label + ': ' + value + ' (' + percentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+    
+                // Inisialisasi grafik side-by-side kinerja
+                const sideBySidePerformanceCtx = document.getElementById('sideBySidePerformanceChart').getContext('2d');
+                sideBySidePerformanceChart = new Chart(sideBySidePerformanceCtx, {
+                    type: 'bar',
+                     {
+                        labels: [],
+                        datasets: [
+                            {
+                                label: 'RAG Benar',
+                                data: [],
+                                backgroundColor: 'rgba(67, 97, 238, 0.7)',
+                                borderColor: 'rgba(67, 97, 238, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'OG Benar',
+                                 [],
+                                backgroundColor: 'rgba(247, 37, 133, 0.7)',
+                                borderColor: 'rgba(247, 37, 133, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Keduanya Benar',
+                                data: [],
+                                backgroundColor: 'rgba(76, 201, 240, 0.7)',
+                                borderColor: 'rgba(76, 201, 240, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 5
+                                }
+                            }
+                        }
+                    }
+                });
+    
+                // Inisialisasi grafik side-by-side kategori
+                const sideBySideCategoryCtx = document.getElementById('sideBySideCategoryChart').getContext('2d');
+                sideBySideCategoryChart = new Chart(sideBySideCategoryCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [
+                            {
+                                label: 'Keduanya Benar',
+                                data: [],
+                                backgroundColor: 'rgba(76, 201, 240, 0.7)',
+                                borderColor: 'rgba(76, 201, 240, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Hanya RAG Benar',
+                                 [],
+                                backgroundColor: 'rgba(72, 149, 239, 0.7)',
+                                borderColor: 'rgba(72, 149, 239, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Hanya OG Benar',
+                                 [],
+                                backgroundColor: 'rgba(248, 150, 30, 0.7)',
+                                borderColor: 'rgba(248, 150, 30, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Keduanya Salah',
+                                 [],
+                                backgroundColor: 'rgba(141, 153, 174, 0.7)',
+                                borderColor: 'rgba(141, 153, 174, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 5
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+    
+            // Tambahkan fungsi global untuk removeFile
+            window.removeFile = removeFile;
+        </script>
+    </body>
+    </html>
+    ```
