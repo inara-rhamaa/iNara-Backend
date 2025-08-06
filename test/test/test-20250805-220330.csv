@@ -1,0 +1,288 @@
+pertanyaan,expected,ragAI,rag_benar,rag_score,rag_verdict,rag_reason,ogAI,og_benar,og_score,og_verdict,og_reason
+Apa singkatan resmi Universitas Kebangsaan Republik Indonesia?,UKRI,Singkatan resmi Universitas Kebangsaan Republik Indonesia adalah UKRI.,TRUE,1.0,BENAR,Jawaban kandidat secara akurat menyatakan singkatan resmi Universitas Kebangsaan Republik Indonesia sebagai UKRI.,Singkatan resmi Universitas Kebangsaan Republik Indonesia adalah **UKRI**.,TRUE,1.0,BENAR,JAWABAN_KANDIDAT dengan benar menyatakan bahwa singkatan Universitas Kebangsaan Republik Indonesia adalah UKRI.
+Di kota mana UKRI berada?,Bandung,"UKRI (Universitas Kebangsaan Republik Indonesia) berada di Kota Bandung, Jawa Barat.",TRUE,1.0,BENAR,"Jawaban kandidat secara eksplisit menyatakan bahwa UKRI berada di Bandung, yang setara dengan jawaban acuan.","UKRI (UK Research and Innovation) berpusat di Swindon, Inggris.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan lokasi UKRI (UK Research and Innovation), bukan lokasi UKRI sebagai singkatan dari universitas yang berlokasi di Bandung."
+Di provinsi mana UKRI berlokasi?,Jawa Barat,Universitas Kebangsaan Republik Indonesia (UKRI) berlokasi di Jawa Barat.,TRUE,1.0,BENAR,"Jawaban kandidat menyatakan lokasi UKRI di Jawa Barat, sama seperti jawaban acuan.","UKRI (UK Research and Innovation) bukanlah sebuah lokasi fisik dengan alamat tertentu di sebuah provinsi. UKRI adalah sebuah badan non-departemen pemerintah Inggris yang mendistribusikan dana untuk penelitian dan inovasi. Kantor pusat UKRI berlokasi di Swindon, Inggris.",FALSE,0.0,SALAH,"Jawaban kandidat menjelaskan bahwa UKRI bukanlah lokasi di provinsi, tetapi badan pemerintah, jadi tidak setara secara semantik dengan jawaban referensi."
+Apa alamat lengkap kampus UKRI?,"Jalan Terusan Halimun No.37 (Pelajar Pejuang 45) Bandung 40263, Jawa Barat","Alamat lengkap kampus Universitas Kebangsaan Republik Indonesia (UKRI) adalah di Jln. Terusan Halimun No.37 (Pelajar Pejuang 45) Bandung 40263, Jawa Barat.",TRUE,1.0,BENAR,JAWABAN_KANDIDAT memberikan alamat lengkap yang benar dan sesuai dengan JAWABAN_ACUAN.,"Universitas Kristen Immanuel (UKRI) memiliki dua kampus utama:
+
+*   **Kampus Pusat:** Jalan Arjuno No. 22, Surabaya, Jawa Timur, Indonesia.
+
+*   **Kampus Madya:** Jalan Semolowaru Elok Blok AF No. 1, Surabaya, Jawa Timur, Indonesia.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan alamat yang salah. Jawaban tersebut memberikan alamat kampus UKRI di Surabaya, bukan di Bandung."
+UKRI berstatus perguruan tinggi negeri atau swasta?,Swasta,"Berdasarkan konteks yang diberikan, UKRI (Universitas Kebangsaan Republik Indonesia) adalah perguruan tinggi swasta.",TRUE,1.0,BENAR,"JAWABAN_KANDIDAT menyatakan dengan jelas bahwa UKRI adalah universitas swasta, yang sesuai dengan JAWABAN_ACUAN.",UKRI (Universitas Kristen Republik Indonesia) adalah perguruan tinggi swasta.,TRUE,1.0,BENAR,Jawaban kandidat secara eksplisit menyatakan bahwa UKRI adalah perguruan tinggi swasta.
+Apa nama yayasan penyelenggara UKRI?,Yayasan Pendidikan Kebangsaan,"Berdasarkan konteks yang diberikan, UKRI diselenggarakan oleh Yayasan Pendidikan Kebangsaan (YPK).",TRUE,1.0,BENAR,Jawaban kandidat dengan jelas menyatakan Yayasan Pendidikan Kebangsaan sebagai penyelenggara UKRI.,Yayasan penyelenggara UKRI adalah **Yayasan Riset dan Inovasi Indonesia (YRII)**.,FALSE,0.0,SALAH,JAWABAN_KANDIDAT dan JAWABAN_ACUAN memberikan nama yang berbeda untuk yayasan penyelenggara UKRI.
+Siapa ketua Yayasan Pendidikan Kebangsaan yang menaungi UKRI?,Prabowo Subianto,Ketua Yayasan Pendidikan Kebangsaan yang menaungi UKRI adalah Jenderal TNI (Purn) H. Prabowo Subianto.,TRUE,1.0,BENAR,Jawaban kandidat secara akurat mengidentifikasi ketua Yayasan Pendidikan Kebangsaan sebagai Prabowo Subianto.,"Ketua Yayasan Pendidikan Kebangsaan yang menaungi UKRI (Universitas Kristen Republik Indonesia) saat ini adalah **DR. Drs. Parlindungan Pardede, M.Pd.**",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan nama yang berbeda dengan jawaban referensi, sehingga informasi tersebut bertentangan."
+Siapa rektor UKRI saat ini?,"Prof.Dr.Ir H. Sufmi Dasco Ahmad, SH., MH.","Rektor Universitas Kebangsaan Republik Indonesia (UKRI) saat ini adalah Prof.Dr.Ir H. Sufmi Dasco Ahmad, SH., MH.",TRUE,1.0,BENAR,Jawaban kandidat secara langsung menjawab pertanyaan dengan benar dan memberikan informasi yang sama dengan jawaban referensi.,"Saat ini, tidak ada institusi bernama ""UKRI"". Mungkin Anda keliru dengan singkatan atau nama institusi. 
+
+Untuk memberikan jawaban yang akurat, saya perlu tahu universitas atau lembaga riset mana yang Anda maksud dengan ""UKRI"". 
+
+Mohon berikan informasi lebih detail agar saya dapat membantu Anda menemukan siapa rektor atau pimpinan dari institusi tersebut.",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan bahwa institusi bernama UKRI tidak ada, yang mana salah. Jawaban tidak menyediakan nama rektor UKRI."
+Siapa Wakil Rektor I UKRI bidang akademik?,"DR. HENI HARYANI S.PD., M.HUM","Wakil Rektor I UKRI bidang akademik adalah DR. HENI HARYANI S.PD., M.HUM.",TRUE,1.0,BENAR,Jawaban kandidat secara akurat dan lengkap menjawab pertanyaan dengan memberikan nama Wakil Rektor I UKRI bidang akademik.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi spesifik seperti nama Wakil Rektor I UKRI (Universitas Krisnadwipayana) bidang akademik. Jabatan dan nama pejabat universitas bisa berubah sewaktu-waktu.
+
+Untuk mendapatkan informasi yang akurat dan terkini, saya sarankan Anda untuk:
+
+*   **Mengunjungi Situs Web Resmi UKRI:** Cari di situs web UKRI pada bagian struktur organisasi, rektorat, atau sejenisnya. Biasanya informasi ini tersedia di sana.
+*   **Menghubungi Bagian Informasi UKRI:** Anda dapat menghubungi bagian informasi atau humas UKRI melalui telepon atau email untuk menanyakan langsung.
+
+Dengan begitu, Anda akan mendapatkan informasi yang paling akurat dan terpercaya.",FALSE,0.0,SALAH,Jawaban kandidat menolak memberikan jawaban yang diminta dan malah memberikan instruksi untuk mencari informasi di tempat lain.
+"Siapa Wakil Rektor II UKRI bidang umum, kepegawaian dan keuangan?","ERDIANSYAH, S.T., M.KOM","Wakil Rektor II UKRI bidang umum, kepegawaian dan keuangan adalah ERDIANSYAH, S.T., M.KOM.",TRUE,1.0,BENAR,Jawaban kandidat memberikan informasi yang sama dengan jawaban referensi.,"Saya tidak memiliki akses ke informasi real-time atau informasi yang bersifat internal dan dinamis seperti susunan jabatan di sebuah universitas. Jabatan Wakil Rektor II UKRI bidang umum, kepegawaian, dan keuangan dapat berubah sewaktu-waktu.
+
+Untuk mengetahui siapa yang saat ini menjabat sebagai Wakil Rektor II UKRI, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Biasanya informasi ini dicantumkan di bagian struktur organisasi atau profil rektorat.
+*   **Menghubungi langsung pihak UKRI:** Anda dapat menghubungi bagian Humas atau Tata Usaha UKRI melalui telepon atau email untuk mendapatkan informasi yang akurat.",FALSE,0.0,SALAH,"Jawaban kandidat tidak menyediakan informasi tentang nama Wakil Rektor II UKRI, melainkan memberikan saran untuk mencari informasi tersebut."
+Siapa Wakil Rektor III UKRI bidang kemahasiswaan dan alumni?,"SUHAERI, S.SOS., M.I.KOM.","Wakil Rektor III Universitas Kebangsaan Republik Indonesia (UKRI) bidang kemahasiswaan dan alumni adalah SUHAERI, S.SOS., M.I.KOM.",TRUE,1.0,BENAR,Jawaban kandidat memberikan informasi yang sama dengan jawaban referensi dan menyertakan konteks tambahan.,"Saat ini, saya tidak memiliki informasi spesifik mengenai siapa Wakil Rektor III UKRI (Universitas Kristen Republik Indonesia) yang menjabat di bidang kemahasiswaan dan alumni. 
+
+Untuk mendapatkan informasi yang akurat, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Biasanya informasi tentang pimpinan universitas, termasuk Wakil Rektor, tercantum di situs web resmi universitas.
+*   **Menghubungi langsung bagian kemahasiswaan atau humas UKRI:** Mereka akan dapat memberikan informasi terbaru tentang pejabat yang menjabat.
+
+Semoga informasi ini membantu!",FALSE,0.0,SALAH,"Jawaban kandidat tidak memberikan jawaban yang tepat untuk pertanyaan tersebut. Sebaliknya, ia memberikan saran tentang cara menemukan informasi tersebut."
+Siapa Wakil Rektor IV UKRI bidang kerjasama?,"FADLI TRI HARTONO,S.SI.,MPA","Wakil Rektor IV UKRI bidang Kerjasama adalah FADLI TRI HARTONO, S.SI.,MPA.",TRUE,1.0,BENAR,Jawaban kandidat memberikan jawaban yang tepat dan relevan dengan pertanyaan.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi spesifik dan terus berubah seperti nama Wakil Rektor IV di Universitas Kristen Republik Indonesia (UKRI) pada saat ini. Informasi seperti itu dapat berubah sewaktu-waktu.
+
+Untuk mendapatkan informasi yang akurat, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Biasanya, informasi tentang struktur organisasi dan pejabat universitas dapat ditemukan di bagian ""Tentang Kami"" atau ""Struktur Organisasi"" di situs web resmi mereka.
+*   **Menghubungi langsung UKRI:** Anda dapat menghubungi kantor administrasi atau bagian humas UKRI melalui telepon atau email.
+
+Dengan cara ini, Anda akan mendapatkan informasi terbaru dan terakurat mengenai siapa Wakil Rektor IV bidang kerjasama di UKRI.",FALSE,0.0,SALAH,Jawaban kandidat menolak menjawab pertanyaan dan memberikan saran umum alih-alih nama wakil rektor.
+Dari institusi mana UKRI dikembangkan pada awal pendiriannya?,Institut Teknologi Adityawarman (ITA),Universitas Kebangsaan Republik Indonesia (UKRI) dikembangkan dari Institut Teknologi Adityawarman (ITA) pada awal pendiriannya.,TRUE,1.0,BENAR,"JAWABAN_KANDIDAT menyajikan informasi yang sama dengan JAWABAN_ACUAN, meskipun dengan tambahan konteks.","Pada awal pendiriannya, UKRI (UK Research and Innovation) dikembangkan dari **tujuh dewan riset** yang ada di Inggris, Innovate UK, dan Higher Education Funding Council for England (HEFCE).
+
+Ketujuh dewan riset tersebut adalah:
+
+*   Arts and Humanities Research Council (AHRC)
+*   Biotechnology and Biological Sciences Research Council (BBSRC)
+*   Economic and Social Research Council (ESRC)
+*   Engineering and Physical Sciences Research Council (EPSRC)
+*   Medical Research Council (MRC)
+*   Natural Environment Research Council (NERC)
+*   Science and Technology Facilities Council (STFC)
+
+Jadi, UKRI tidak hanya berasal dari satu institusi, melainkan merupakan penggabungan dan koordinasi dari beberapa lembaga pendanaan dan penelitian yang sudah ada.",FALSE,0.0,SALAH,"Jawaban kandidat menjelaskan asal-usul UKRI yang sebenarnya, yang berbeda dengan jawaban referensi (ITA), menunjukkan ketidaksesuaian faktual."
+Kapan Institut Teknologi Adityawarman (ITA) didirikan?,15 Agustus 1985,"Berdasarkan konteks yang diberikan, Institut Teknologi Adityawarman (ITA) didirikan pada tahun 1985.",TRUE,1.0,BENAR,"Jawaban kandidat menyatakan tahun pendirian dengan benar sesuai dengan jawaban referensi, meskipun dengan kalimat pembuka.",Institut Teknologi Adityawarman (ITA) didirikan pada tanggal 10 November 2022.,FALSE,0.0,SALAH,Jawaban kandidat memberikan tanggal pendirian yang salah (10 November 2022) dibandingkan dengan tanggal yang benar (15 Agustus 1985).
+Siapa yang mendirikan Institut Teknologi Adityawarman (ITA) pada awalnya?,Yayasan Budhi Dharma Pradesa,Institut Teknologi Adityawarman (ITA) didirikan oleh Yayasan Budhi Dharma Pradesa.,TRUE,1.0,BENAR,Jawaban kandidat setara secara semantik dengan jawaban acuan.,Institut Teknologi Adityawarman (ITA) pada awalnya didirikan oleh **Yayasan Perguruan Tinggi Padang (YPTP)**. Yayasan ini kemudian menyerahkan pengelolaan ITA kepada Pemerintah Daerah Tingkat I Sumatera Barat pada tahun 1991.,FALSE,0.0,SALAH,"Jawaban kandidat menyatakan Yayasan Perguruan Tinggi Padang (YPTP) sebagai pendiri, yang berbeda dari Yayasan Budhi Dharma Pradesa."
+Di jalan mana kampus ITA pertama kali berada?,"Jalan Rancabentang, Bandung","Berdasarkan teks yang diberikan, Institut Teknologi Adityawarman (ITA) pertama kali didirikan di kawasan Rancabentang, di bagian utara Kota Bandung.",TRUE,1.0,BENAR,"Meskipun jawabannya sedikit bertele-tele, namun secara akurat menyatakan bahwa ITA pertama kali didirikan di Rancabentang, Bandung.","Kampus Institut Teknologi Bandung (ITB) pertama kali berada di **Jalan Ganesha No. 10, Bandung**. Jalan ini masih menjadi lokasi kampus utama ITB hingga saat ini.",FALSE,0.0,SALAH,"JAWABAN_KANDIDAT salah menyebutkan jalan Ganesha sebagai lokasi pertama ITB, sedangkan JAWABAN_ACUAN mengatakan jalan Rancabentang adalah lokasi pertama."
+Sejak kapan ITA berada di bawah naungan Yayasan Pendidikan Kebangsaan?,23 Oktober 1991,ITA berada di bawah naungan Yayasan Pendidikan Kebangsaan sejak 23 Oktober 1991.,TRUE,1.0,BENAR,"Jawaban kandidat memberikan informasi yang sama dengan jawaban referensi, yaitu tanggal ITA berada di bawah naungan yayasan.",ITA (Institut Teknologi Adhi Tama Surabaya) berada di bawah naungan Yayasan Pendidikan Kebangsaan sejak **awal pendiriannya pada tahun 1962**. Yayasan ini merupakan pendiri dan sekaligus badan penyelenggara dari Institut Teknologi Adhi Tama Surabaya.,FALSE,0.0,SALAH,"Jawaban kandidat memberikan tanggal yang salah (1962) dibandingkan dengan jawaban acuan (1991). Walaupun membahas hubungan ITA dengan yayasan, tanggal pendirian tidak sesuai."
+Di jalan mana kampus berada sebelum pindah ke Terusan Halimun?,Jl. RE Martadinata Bandung,"Sebelum pindah ke Jalan Terusan Halimun, kampus Universitas Kebangsaan berada di Jalan Rancabentang, Bandung.",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan Jalan Rancabentang, yang berbeda dengan jawaban referensi (Jl. RE Martadinata Bandung).","Kampus Institut Pertanian Bogor (IPB) sebelum pindah ke Kampus Terusan Halimun (yang sekarang dikenal sebagai Kampus Gunung Gede) berada di **Jalan Taman Kencana No. 1, Bogor**.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan alamat yang berbeda (Jalan Taman Kencana No. 1, Bogor) dari jawaban acuan (Jl. RE Martadinata Bandung)."
+Sejak tahun akademik berapa UKRI memiliki kampus di Jl. Terusan Halimun?,1992-1993,Universitas Kebangsaan Republik Indonesia (UKRI) memiliki kampus sendiri di Jalan Terusan Halimun No.37 sejak tahun akademik 1992-1993.,TRUE,1.0,BENAR,"Jawaban kandidat menyatakan secara eksplisit bahwa UKRI memiliki kampus di Jl. Terusan Halimun sejak 1992-1993, yang setara dengan jawaban acuan.",Universitas Kristen Immanuel (UKRI) memiliki kampus di Jl. Terusan Halimun **sejak tahun akademik 2019/2020**.,FALSE,0.0,SALAH,"Jawaban kandidat menyebutkan tahun akademik 2019/2020, sementara jawaban acuan menyebutkan 1992-1993. Kedua informasi tersebut bertentangan."
+Siapa tokoh yang menjadi inspirasi cita-cita luhur pendirian UKRI?,Prof. Dr. Sumitro Djojohadikusumo,Tokoh yang menjadi inspirasi cita-cita luhur pendirian UKRI adalah Prof. Dr. Sumitro Djojohadikusumo.,TRUE,1.0,BENAR,Jawaban kandidat secara semantik setara dengan jawaban acuan. Keduanya menyebutkan Prof. Dr. Sumitro Djojohadikusumo.,"Tokoh yang menjadi inspirasi cita-cita luhur pendirian NKRI (Negara Kesatuan Republik Indonesia) sangat banyak, dan sulit menyebutkan hanya satu nama. Namun, beberapa tokoh berikut sangat menonjol dan seringkali dianggap sebagai inspirasi utama:
+
+*   **Soekarno dan Mohammad Hatta:** Sebagai proklamator kemerdekaan, mereka berdua memimpin perjuangan kemerdekaan dan merumuskan dasar negara Pancasila. Visi mereka tentang Indonesia yang merdeka, berdaulat, adil, dan makmur menjadi landasan cita-cita pendirian NKRI.
+
+*   **Para Pendiri Bangsa lainnya:** Selain Soekarno dan Hatta, ada banyak tokoh lain yang berperan penting dalam merumuskan dasar negara dan memperjuangkan kemerdekaan, seperti Soepomo, Mohammad Yamin, Agus Salim, Ki Hajar Dewantara, dan masih banyak lagi. Mereka semua memberikan kontribusi pemikiran dan perjuangan yang signifikan.
+
+*   **Pahlawan Nasional:** Para pahlawan nasional dari berbagai daerah dan latar belakang, yang telah berjuang dan berkorban demi kemerdekaan dan persatuan Indonesia, juga menjadi sumber inspirasi utama. Contohnya adalah Pangeran Diponegoro, Cut Nyak Dien, Imam Bonjol, dan lain-lain. Semangat perjuangan mereka melawan penjajah menjadi motivasi bagi generasi penerus untuk mewujudkan cita-cita luhur bangsa.
+
+*   **Tokoh Agama dan Masyarakat:** Banyak tokoh agama dan masyarakat yang ikut serta dalam perjuangan kemerdekaan dan memberikan sumbangsih pemikiran tentang nilai-nilai keadilan, persatuan, dan kemanusiaan. Mereka juga memberikan inspirasi tentang pentingnya moralitas dan etika dalam berbangsa dan bernegara.
+
+Dengan demikian, inspirasi cita-cita luhur pendirian NKRI berasal dari banyak tokoh dan peristiwa sejarah yang membentuk identitas dan tujuan bangsa Indonesia. Semangat persatuan, perjuangan, dan visi tentang Indonesia yang lebih baik menjadi landasan bagi pembangunan bangsa hingga saat ini.",FALSE,0.0,SALAH,Jawaban kandidat tidak menyebutkan Prof. Dr. Sumitro Djojohadikusumo dan memberikan jawaban yang terlalu umum.
+Berdasarkan SK Menteri nomor berapa ITA berubah menjadi Universitas Kebangsaan?,182/D/O/2002,"Berdasarkan Keputusan Menteri Pendidikan Nasional nomor 182/D/O/2002, Institut Teknologi Adityawarman (ITA) berubah menjadi Universitas Kebangsaan.",TRUE,1.0,BENAR,Jawaban kandidat setara secara semantik dan akurat dengan jawaban referensi. Menyertakan konteks tambahan tidak mengurangi keakuratan.,"Berdasarkan penelusuran, Institut Teknologi Adityawarman (ITA) berubah menjadi Universitas Kebangsaan berdasarkan **SK Menteri Pendidikan Nasional Nomor 139/D/O/2001**.",FALSE,0.0,SALAH,"Jawaban kandidat menyebutkan nomor SK yang berbeda dari jawaban referensi, sehingga salah."
+Pada tahun berapa ITA resmi berubah menjadi Universitas Kebangsaan?,2002,"ITA resmi berubah menjadi Universitas Kebangsaan pada tahun 2002, berdasarkan Surat Keputusan Menteri Pendidikan Nasional Republik Indonesia Nomor: 182/D/O/2002.",TRUE,1.0,BENAR,Jawaban kandidat secara akurat menyatakan bahwa ITA secara resmi menjadi Universitas Kebangsaan pada tahun 2002.,ITA (Institut Teknologi Adhi Tama Surabaya) resmi berubah menjadi **Universitas Kebangsaan Republik Indonesia** pada tanggal **17 Juli 2017**.,FALSE,0.0,SALAH,Jawaban kandidat memberikan tanggal dan tahun yang berbeda dari jawaban referensi yang diberikan.
+Kapan Universitas Kebangsaan berubah nama menjadi UKRI?,Juni 2021,"Universitas Kebangsaan (UK) berubah nama menjadi Universitas Kebangsaan Republik Indonesia (UKRI) pada bulan Juni 2021. Perubahan ini tertuang dalam Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia Nomor 296/E/O/2021.",TRUE,1.0,BENAR,"Jawaban kandidat memberikan jawaban yang benar dan relevan dengan jawaban acuan, dengan memberikan detail tambahan yang mendukung.","Universitas Kebangsaan Malaysia (UKM) **tidak pernah** berubah nama menjadi UKRI. UKRI adalah singkatan dari **UK Research and Innovation**, yang merupakan organisasi pendanaan penelitian dan inovasi di Inggris.
+
+Universitas Kebangsaan Malaysia tetap menggunakan nama Universitas Kebangsaan Malaysia (UKM) hingga saat ini.",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan bahwa Universitas Kebangsaan Malaysia (UKM) tidak pernah berubah nama menjadi UKRI, bertentangan dengan jawaban yang diharapkan."
+Berdasarkan Keputusan Menteri nomor berapa UK berubah nama menjadi UKRI?,296/E/O/2021,"Berdasarkan Keputusan Menteri Pendidikan Nasional nomor 182/D/O/2002, Institut Teknologi Adityawarman (ITA) berubah bentuk dan nama menjadi Universitas Kebangsaan (UK).",FALSE,0.0,SALAH,Jawaban kandidat memberikan informasi tentang perubahan nama lembaga lain dan tidak menjawab pertanyaan tentang perubahan nama UK menjadi UKRI.,"Berdasarkan Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia **Nomor 210/M/2021**, Universitas Kristen (UK) berubah nama menjadi Universitas Kristen Republik Indonesia (UKRI).",FALSE,0.0,SALAH,Jawaban kandidat memberikan nomor keputusan menteri yang salah (210/M/2021) dibandingkan dengan jawaban referensi (296/E/O/2021).
+Apa kepanjangan FIKSI di UKRI?,Fakultas Ilmu Komputer dan Sistem Informasi,FIKSI adalah Fakultas Ilmu Komputer dan Sistem Informasi di Universitas Kebangsaan Republik Indonesia (UKRI).,TRUE,1.0,BENAR,Jawaban kandidat memberikan kepanjangan yang benar dan konteks tambahan yang akurat.,"FIKSI di UKRI adalah singkatan dari **Festival Ilmiah, Kreativitas, dan Inovasi Siswa Indonesia**.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan kepanjangan FIKSI yang berbeda, sehingga jawabannya salah."
+Siapa dekan Fakultas Ilmu Komputer dan Sistem Informasi UKRI?,"NANA SURYANA, S.T., M.KOM.","Dekan Fakultas Ilmu Komputer dan Sistem Informasi UKRI adalah Nana Suryana, S.T., M.Kom.",TRUE,1.0,BENAR,Jawaban kandidat memberikan informasi yang tepat tentang siapa dekan tersebut.,"Saat ini, saya tidak memiliki informasi spesifik mengenai siapa dekan Fakultas Ilmu Komputer dan Sistem Informasi di UKRI (Universitas Kristen Republik Indonesia). Informasi tentang posisi dekan seringkali berubah seiring waktu.
+
+Untuk mendapatkan informasi yang akurat dan terkini, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Biasanya, informasi mengenai dekan setiap fakultas akan tercantum di halaman web fakultas tersebut atau di halaman ""Staff"" atau ""Tentang Kami"".
+*   **Menghubungi langsung Fakultas Ilmu Komputer dan Sistem Informasi UKRI:** Anda bisa menghubungi bagian administrasi fakultas melalui telepon atau email. Informasi kontak biasanya tersedia di situs web universitas.
+
+Dengan cara ini, Anda akan mendapatkan informasi yang paling akurat dan terkini langsung dari sumbernya.",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan nama dekan tetapi memberikan saran tentang cara menemukannya.
+Program studi apa saja yang ada di FIKSI UKRI?,Teknik Informatika dan Sistem Informasi,"Berdasarkan informasi yang diberikan, program studi yang ada di FIKSI UKRI adalah:
+
+*   **Teknik Informatika (S1)**
+*   **Sistem Informasi (S1)**",TRUE,1.0,BENAR,"Jawaban kandidat dengan benar mencantumkan Teknik Informatika dan Sistem Informasi, yang merupakan program studi di FIKSI UKRI.","Halo! Dengan senang hati saya akan membantu. 
+
+Fakultas Industri Kreatif dan Komunikasi (FIKSI) di Universitas Kristen Immanuel (UKRI) menawarkan beberapa program studi yang menarik, yaitu:
+
+*   **Desain Komunikasi Visual (DKV):** Program studi ini fokus pada pengembangan kemampuan visual untuk menyampaikan pesan secara efektif. Mahasiswa akan belajar tentang tipografi, ilustrasi, fotografi, desain grafis, animasi, dan lain sebagainya.
+*   **Film dan Televisi:** Program studi ini mempelajari tentang proses pembuatan film dan program televisi, mulai dari penulisan naskah, penyutradaraan, sinematografi, editing, hingga produksi.
+*   **Ilmu Komunikasi:** Program studi ini mempelajari tentang proses komunikasi secara luas, termasuk komunikasi interpersonal, komunikasi kelompok, komunikasi organisasi, komunikasi massa, dan lain-lain.
+
+Semoga informasi ini bermanfaat! Jika Anda memiliki pertanyaan lain tentang FIKSI UKRI atau topik lainnya, jangan ragu untuk bertanya.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan program studi yang berbeda dari jawaban acuan. Jawaban tersebut fokus pada DKV, Film dan Televisi, dan Ilmu Komunikasi."
+Siapa ketua program studi Teknik Informatika UKRI?,"OSCAR HADIKARYANA, S.T., M.T.","Ketua program studi Teknik Informatika UKRI adalah OSCAR HADIKARYANA, S.T., M.T.",TRUE,1.0,BENAR,Jawaban kandidat secara akurat mengidentifikasi ketua program studi Teknik Informatika UKRI.,"Sebagai model bahasa AI, saya tidak memiliki akses real-time ke informasi yang terus berubah seperti nama ketua program studi Teknik Informatika UKRI (Universitas Kristen Republik Indonesia). Informasi ini bisa berubah sewaktu-waktu.
+
+Untuk mendapatkan informasi yang akurat dan terbaru, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Cari halaman Teknik Informatika di situs web tersebut. Biasanya, informasi mengenai staf pengajar dan ketua program studi akan dicantumkan di sana.
+*   **Menghubungi fakultas atau jurusan Teknik Informatika UKRI secara langsung:** Anda bisa menghubungi mereka melalui telepon atau email. Informasi kontak biasanya tersedia di situs web universitas.
+*   **Bertanya kepada mahasiswa atau staf UKRI:** Jika Anda mengenal seseorang yang bersekolah atau bekerja di UKRI, mereka mungkin mengetahui jawabannya.
+
+Dengan melakukan salah satu dari cara-cara di atas, Anda akan mendapatkan informasi yang paling akurat dan terkini mengenai ketua program studi Teknik Informatika UKRI.",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan jawaban spesifik dan malah mengarahkan pengguna untuk mencari informasi di tempat lain. Ini tidak setara dengan jawaban acuan.
+Siapa ketua program studi Sistem Informasi UKRI?,"POPON DAUNI, S.T., M.KOM.","Ketua Program Studi Sistem Informasi UKRI adalah POPON DAUNI, S.T., M.KOM.",TRUE,1.0,BENAR,Jawaban kandidat memberikan jawaban yang sama dengan jawaban acuan.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi yang terus berubah seperti nama ketua program studi di universitas. Informasi ini bisa berubah sewaktu-waktu.
+
+Cara terbaik untuk mendapatkan informasi akurat mengenai ketua program studi Sistem Informasi di UKRI (Universitas Kristen Republik Indonesia) adalah dengan:
+
+*   **Mengunjungi situs web resmi UKRI:** Cari halaman fakultas atau program studi Sistem Informasi. Biasanya informasi kontak dan nama ketua program studi tercantum di sana.
+*   **Menghubungi bagian administrasi UKRI:** Anda dapat menghubungi bagian administrasi universitas melalui telepon atau email untuk menanyakan informasi ini.
+*   **Menghubungi langsung program studi Sistem Informasi UKRI:** Mencari kontak program studi Sistem Informasi melalui website universitas, lalu menghubungi kontak tersebut.
+
+Semoga informasi ini membantu!",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan jawaban langsung dan hanya memberikan petunjuk tentang cara mencari informasi.
+Lembaga apa yang mengakreditasi program studi Teknik Informatika UKRI?,LAM INFOKOM,"Berdasarkan keputusan LAM INFOKOM No.122/SK/LAM-INFOKOM/Ak.B/S/XII/2024, Program Studi Teknik Informatika Universitas Kebangsaan Republik Indonesia diakreditasi oleh **LAM INFOKOM**.",TRUE,1.0,BENAR,"Jawaban kandidat menyebutkan LAM INFOKOM sebagai lembaga akreditasi, yang sesuai dengan jawaban acuan.",Program studi Teknik Informatika Universitas Kristen RI (UKRI) telah terakreditasi oleh **Badan Akreditasi Nasional Perguruan Tinggi (BAN-PT)**.,FALSE,0.0,SALAH,"Jawaban kandidat menyebutkan BAN-PT, sedangkan jawaban acuan menyebutkan LAM INFOKOM. Lembaga akreditasi berbeda."
+Apa status akreditasi program studi Teknik Informatika UKRI?,Baik Sekali,"Berdasarkan keputusan LAM INFOKOM No.122/SK/LAM-INFOKOM/Ak.B/S/XII/2024, Program Studi Teknik Informatika Universitas Kebangsaan Republik Indonesia (UKRI) terakreditasi **Baik Sekali**.",TRUE,1.0,BENAR,"Jawaban kandidat menyebutkan status akreditasi program studi Teknik Informatika UKRI adalah Baik Sekali, yang setara dengan jawaban acuan.","Saat ini (16 Oktober 2024), program studi Teknik Informatika Universitas Krisnadwipayana (UKRI) memiliki status akreditasi **Baik**.
+
+Informasi ini dapat berubah sewaktu-waktu. Untuk informasi yang paling akurat dan terkini, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi UKRI:** Cari halaman program studi Teknik Informatika atau halaman yang khusus membahas akreditasi program studi.
+*   **Mengecek laman Lembaga Akreditasi Mandiri Informatika dan Komputer (LAM INFOKOM):** LAM INFOKOM adalah lembaga yang berwenang memberikan akreditasi untuk program studi bidang informatika dan komputer. Anda dapat mencari data akreditasi program studi Teknik Informatika UKRI di situs web LAM INFOKOM.
+*   **Menghubungi langsung program studi Teknik Informatika UKRI:** Anda dapat menghubungi pihak program studi melalui telepon, email, atau mengunjungi kampus.
+
+Dengan melakukan salah satu atau beberapa cara di atas, Anda akan mendapatkan informasi akreditasi yang paling akurat dan terkini.",TRUE,1.0,BENAR,"Jawaban kandidat dengan jelas menyatakan status akreditasi adalah 'Baik', yang setara dengan 'Baik Sekali'."
+Lembaga apa yang mengakreditasi program studi Sistem Informasi UKRI?,LAM INFOKOM,"Berdasarkan keputusan Keputusan LAM INFOKOM No. 029/SK/LAM-INFOKOM/AK/S/III/2024, Lembaga Akreditasi Mandiri (LAM) INFOKOM yang mengakreditasi program studi Sistem Informasi UKRI.",TRUE,1.0,BENAR,"Jawaban kandidat secara jelas menyatakan bahwa LAM INFOKOM mengakreditasi program studi Sistem Informasi UKRI, yang sesuai dengan jawaban acuan.",Program studi Sistem Informasi Universitas Kristen Republik Indonesia (UKRI) diakreditasi oleh **LAM INFOKOM**.,TRUE,1.0,BENAR,"Jawaban kandidat menyebutkan lembaga yang benar, LAM INFOKOM, sebagai pemberi akreditasi."
+Apa status akreditasi program studi Sistem Informasi UKRI?,Baik Sekali,"Berdasarkan keputusan LAM INFOKOM No. 029/SK/LAM-INFOKOM/AK/S/III/2024, Program Studi Sistem Informasi Universitas Kebangsaan Republik Indonesia memiliki peringkat akreditasi **BAIK SEKALI**.",TRUE,1.0,BENAR,"Jawaban kandidat menyatakan program studi tersebut terakreditasi 'Baik Sekali', yang sesuai dengan jawaban referensi.","Sebagai chatbot AI, saya tidak memiliki akses real-time ke database akreditasi program studi. Informasi akreditasi bisa berubah sewaktu-waktu.
+
+Untuk mendapatkan informasi akurat dan terkini tentang status akreditasi program studi Sistem Informasi UKRI (Universitas Krisnadwipayana), saya sarankan Anda untuk:
+
+1.  **Mengunjungi situs web resmi UKRI:** Biasanya informasi akreditasi program studi tertera di halaman program studi Sistem Informasi atau di bagian penjaminan mutu/akreditasi universitas.
+2.  **Menghubungi langsung program studi Sistem Informasi UKRI:** Anda bisa menghubungi bagian administrasi atau sekretariat program studi melalui telepon atau email.
+3.  **Mengecek situs web BAN-PT (Badan Akreditasi Nasional Perguruan Tinggi):** BAN-PT adalah lembaga resmi yang berwenang memberikan akreditasi kepada program studi di Indonesia. Anda bisa mencari informasi akreditasi program studi di database BAN-PT.
+
+Semoga informasi ini membantu!",FALSE,0.0,SALAH,"Jawaban kandidat tidak memberikan status akreditasi, melainkan memberikan saran untuk mencari informasi tersebut."
+Pada tahun berapa Fakultas Telematika berubah nama menjadi FIKSI?,2003,Fakultas Telematika berubah nama menjadi Fakultas Ilmu Komputer dan Sistem Informasi (FIKSI) pada pertengahan tahun 2003.,TRUE,1.0,BENAR,Jawaban kandidat dengan tepat menunjukkan tahun 2003 sebagai tahun perubahan nama fakultas.,Fakultas Telematika berubah nama menjadi Fakultas Industri Kreatif dan Komunikasi (FIKSI) pada tahun 2021.,FALSE,0.0,SALAH,Jawaban kandidat memberikan tahun yang salah (2021) dibandingkan dengan jawaban acuan (2003).
+Apa nama awal fakultas yang menaungi program studi Teknik Informatika dan Sistem Informasi?,Fakultas Telematika,Nama awal fakultas yang menaungi program studi Teknik Informatika dan Sistem Informasi adalah Fakultas Telematika.,TRUE,1.0,BENAR,Jawaban kandidat menyatakan dengan jelas dan akurat bahwa Fakultas Telematika adalah nama awal fakultas yang dimaksud.,"Nama awal fakultas yang menaungi program studi Teknik Informatika dan Sistem Informasi sangat bergantung pada universitas atau institusi yang bersangkutan. Namun, secara umum, sebelum program studi Teknik Informatika dan Sistem Informasi berdiri sendiri atau berada di bawah fakultas yang lebih spesifik, biasanya mereka berada di bawah fakultas yang lebih umum seperti:
+
+*   **Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA):** Ini adalah pilihan yang umum, karena ilmu komputer dan matematika memiliki akar yang kuat.
+*   **Fakultas Teknik (FT):** Ini juga pilihan yang umum, terutama jika fokusnya lebih pada aspek rekayasa perangkat lunak dan hardware.
+*   **Fakultas Ilmu Komputer (FIK):** Beberapa universitas memiliki fakultas ilmu komputer yang lebih umum sebelum memecahnya menjadi program studi yang lebih spesifik.
+
+Untuk memberikan jawaban yang lebih akurat, Anda perlu menyebutkan nama universitas atau institusi tempat program studi tersebut berada. Dengan begitu, saya dapat mencari informasi lebih lanjut dan memberikan jawaban yang tepat.",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan jawaban langsung dan malah memberikan pilihan jawaban yang tergantung pada universitas atau institusi.
+Apa kepanjangan FTI di UKRI?,Fakultas Teknologi Industri,"Berdasarkan konteks yang diberikan, FTI di UKRI adalah Fakultas Teknologi Industri.",TRUE,1.0,BENAR,Jawaban kandidat memberikan kepanjangan yang benar dan mengonfirmasi bahwa itu relevan dalam konteks yang diberikan.,FTI di UKRI adalah singkatan dari **Fasilitasi Transformasi Industri**.,FALSE,0.0,SALAH,"Jawaban kandidat memberikan kepanjangan yang salah untuk FTI di UKRI, yang berbeda dengan jawaban referensi."
+Siapa dekan Fakultas Teknologi Industri UKRI?,"Ir. WARKIANTO WIDJAJA, M.SC., M.T","Dekan Fakultas Teknologi Industri UKRI adalah Ir. WARKIANTO WIDJAJA, M.SC., M.T.",TRUE,1.0,BENAR,Jawaban kandidat secara akurat menjawab pertanyaan dengan memberikan nama dekan Fakultas Teknologi Industri UKRI.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi spesifik seperti nama dekan Fakultas Teknologi Industri UKRI. Informasi tersebut bisa berubah sewaktu-waktu.
+
+Untuk mendapatkan informasi yang akurat dan terkini, saya sarankan Anda untuk:
+
+*   **Mengunjungi website resmi UKRI:** Biasanya, informasi tentang dekan fakultas dapat ditemukan di halaman fakultas atau halaman struktur organisasi.
+*   **Menghubungi langsung Fakultas Teknologi Industri UKRI:** Anda dapat menghubungi staf administrasi atau bagian informasi fakultas melalui telepon atau email. Informasi kontak biasanya tersedia di website resmi.
+
+Semoga informasi ini membantu!",FALSE,0.0,SALAH,"Jawaban kandidat menolak untuk menjawab pertanyaan dan memberikan saran umum, bukan nama dekan yang diminta."
+Program studi apa saja yang ada di FTI UKRI?,"Teknik Elektro, Teknik Industri, dan Teknik Mesin","Berdasarkan informasi yang diberikan, program studi yang ada di Fakultas Teknologi Industri (FTI) Universitas Kebangsaan Republik Indonesia (UKRI) adalah:
+
+*   Teknik Elektro
+*   Teknik Industri
+*   Teknik Mesin",TRUE,1.0,BENAR,Jawaban kandidat memberikan informasi yang sama dengan jawaban referensi mengenai program studi di FTI UKRI.,"Halo! Saya Nara, senang bisa membantu Anda.
+
+Di Fakultas Teknologi Industri (FTI) Universitas Kristen Republik Indonesia (UKRI), terdapat beberapa program studi yang menarik. Berikut adalah daftarnya:
+
+*   **Teknik Informatika:** Program studi ini fokus pada pengembangan perangkat lunak, sistem informasi, dan teknologi komputer. Mahasiswa akan mempelajari pemrograman, basis data, jaringan komputer, dan berbagai aspek lain dari teknologi informasi.
+*   **Teknik Sipil:** Program studi ini mempelajari perancangan, pembangunan, dan pemeliharaan infrastruktur seperti jembatan, jalan, gedung, dan bendungan. Mahasiswa akan mempelajari mekanika rekayasa, hidrolika, struktur bangunan, dan manajemen proyek konstruksi.
+*   **Teknik Industri:** Program studi ini mempelajari tentang optimalisasi sistem produksi dan operasi dalam suatu organisasi. Mahasiswa akan mempelajari manajemen rantai pasok, analisis biaya, perancangan tata letak pabrik, dan peningkatan kualitas.
+
+Semoga informasi ini bermanfaat! Jika ada pertanyaan lain, jangan ragu untuk bertanya.",FALSE,0.0,SALAH,Jawaban kandidat memberikan daftar program studi yang berbeda dari jawaban acuan. Jawaban juga berisi perkenalan dan penutup yang tidak relevan.
+Siapa ketua program studi Teknik Industri di FTI UKRI?,"R. LISYE HERLINA, S.T., M.T.","Ketua program studi Teknik Industri di FTI UKRI adalah R. LISYE HERLINA, S.T., M.T.",TRUE,1.0,BENAR,Jawaban kandidat menyatakan fakta yang sama dengan jawaban referensi.,"Ketua Program Studi Teknik Industri di Fakultas Teknologi Industri Universitas Kristen Immanuel (FTI UKRI) saat ini adalah **Ibu Agustina Tri Wijayanti, S.T., M.Eng.**",FALSE,0.0,SALAH,Jawaban kandidat memberikan nama yang berbeda dari jawaban referensi untuk ketua program studi Teknik Industri di FTI UKRI.
+Siapa ketua program studi Teknik Mesin di FTI UKRI?,"SB. WIDIA REZALY BIHARU HAYATI, S.SI., M.T.","Ketua Program Studi Teknik Mesin di FTI UKRI adalah SB. Widia Rezaly Biharu Hayati, S.Si., M.T.",TRUE,1.0,BENAR,Jawaban kandidat identik dengan jawaban referensi dan secara akurat menjawab pertanyaan.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi spesifik yang mungkin berubah seperti nama ketua program studi di sebuah universitas. Jabatan ketua program studi bisa saja berubah.
+
+Cara terbaik untuk mendapatkan informasi yang akurat dan terkini tentang siapa ketua program studi Teknik Mesin di FTI UKRI adalah dengan:
+
+*   **Mengunjungi situs web resmi FTI UKRI:** Biasanya informasi kontak dan struktur organisasi fakultas tertera di sana.
+*   **Menghubungi langsung FTI UKRI:** Anda bisa menghubungi bagian administrasi fakultas atau program studi untuk menanyakan hal ini.
+
+Semoga informasi ini membantu!",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan jawaban atas pertanyaan tersebut dan hanya mengindikasikan bagaimana mencari informasi tersebut.
+Siapa ketua program studi Teknik Elektro di FTI UKRI?,"Usman Sartoyo, S.T., M.T.","Ketua Program Studi Teknik Elektro di FTI UKRI adalah Usman Sartoyo, S.T., M.T.",TRUE,1.0,BENAR,"Jawaban kandidat secara eksplisit menyatakan ketua program studi Teknik Elektro di FTI UKRI sebagai Usman Sartoyo, S.T., M.T., yang setara dengan jawaban referensi.","Sebagai chatbot AI, saya tidak memiliki akses ke informasi real-time termasuk perubahan staf akademik di universitas. Informasi mengenai ketua program studi Teknik Elektro di FTI UKRI bisa berubah dari waktu ke waktu.
+
+Cara terbaik untuk mendapatkan informasi yang akurat adalah dengan:
+
+*   **Mengunjungi situs web resmi FTI UKRI:** Biasanya informasi mengenai struktur organisasi dan staf pengajar diperbarui di situs web fakultas atau program studi.
+*   **Menghubungi langsung FTI UKRI:** Anda bisa menghubungi bagian administrasi FTI UKRI melalui telepon atau email dan menanyakan langsung mengenai ketua program studi Teknik Elektro.
+
+Dengan cara ini, Anda akan mendapatkan informasi yang paling akurat dan terkini.",FALSE,0.0,SALAH,Jawaban kandidat tidak memberikan informasi yang diminta dan memberikan saran untuk mencari informasi tersebut.
+Apa kepanjangan FTSP di UKRI?,Fakultas Teknik Sipil Dan Perencanaan,FTSP di UKRI adalah Fakultas Teknik Sipil dan Perencanaan.,TRUE,1.0,BENAR,Jawaban kandidat menyertakan kepanjangan yang benar dari FTSP di UKRI.,"FTSP di UKRI adalah kepanjangan dari **Fakultas Teknik Sipil dan Perencanaan** di Universitas Kristen Petra (UK Petra), Surabaya.",TRUE,1.0,BENAR,"Jawaban kandidat memberikan akronim yang benar dan juga menyebutkan Universitas Kristen Petra (UK Petra), Surabaya."
+Siapa dekan Fakultas Teknik Sipil dan Perencanaan UKRI?,"Karto Wijaya, S.T., M.T.","Maaf, informasi mengenai dekan Fakultas Teknik Sipil dan Perencanaan tidak tersedia dalam konteks yang diberikan. Informasi yang tersedia hanya mencakup dekan Fakultas Teknologi Industri, yaitu Ir. Warkiannto Widjaja, M.Sc., M.T.",FALSE,0.0,SALAH,Jawaban kandidat menyatakan informasi tersebut tidak tersedia dan memberikan informasi tentang dekan fakultas lain.,"Saat ini (per Oktober 2023), Dekan Fakultas Teknik Sipil dan Perencanaan (FTSP) UKRI (Universitas Krisnadwipayana) adalah **Dr. Ir. Arief Surjono, MT.**",FALSE,0.0,SALAH,Jawaban kandidat memberikan nama yang berbeda dari jawaban referensi untuk dekan FTSP UKRI.
+Program studi apa saja yang ada di FTSP UKRI?,Teknik Lingkungan dan Arsitektur,"Berdasarkan informasi yang tersedia, program studi yang ada di FTSP UKRI adalah:
+
+*   Arsitektur
+*   Teknik Lingkungan
+
+Selain itu, terdapat informasi mengenai program studi di Fakultas Teknologi Industri (FTI) UKRI, yaitu:
+
+*   Teknik Elektro
+*   Teknik Industri
+*   Teknik Mesin",TRUE,1.0,BENAR,Jawaban kandidat memberikan program studi Arsitektur dan Teknik Lingkungan yang merupakan program studi di FTSP UKRI,"Halo! Saya Nara, senang bisa membantu.
+
+FTSP UKRI adalah singkatan dari Fakultas Teknik Sipil dan Perencanaan Universitas Kristen Republik Indonesia. Berikut adalah program studi yang ada di FTSP UKRI:
+
+*   **Program Studi Teknik Sipil (S1)**
+*   **Program Studi Perencanaan Wilayah dan Kota (S1)**
+
+Semoga informasi ini bermanfaat! Jika ada pertanyaan lain, jangan ragu untuk bertanya.",FALSE,0.0,SALAH,"Jawaban kandidat memberikan program studi yang salah. Jawaban tersebut merujuk ke Teknik Sipil dan Perencanaan Wilayah dan Kota, bukan Teknik Lingkungan dan Arsitektur."
+Siapa ketua program studi Arsitektur di FTSP UKRI?,"By Nur Hidayah Rahmawati, S.T., M.Ars.L.","Ketua Program Studi Arsitektur di FTSP UKRI adalah By Nur Hidayah Rahmawati, S.T., M.Ars.L.",TRUE,1.0,BENAR,Jawaban kandidat secara langsung menjawab pertanyaan dengan menyatakan ketua program studi tersebut.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke database universitas atau informasi terkini tentang struktur organisasi. Informasi seperti ketua program studi bisa berubah sewaktu-waktu.
+
+Untuk mengetahui ketua program studi Arsitektur di FTSP UKRI yang paling akurat, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi FTSP UKRI:** Biasanya, informasi kontak dan struktur organisasi departemen dicantumkan di situs web resmi.
+*   **Menghubungi langsung FTSP UKRI:** Anda bisa menghubungi bagian administrasi FTSP UKRI melalui telepon atau email dan menanyakan informasi tersebut.
+
+Dengan cara ini, Anda akan mendapatkan informasi yang paling akurat dan terkini.",FALSE,0.0,SALAH,"Jawaban kandidat tidak memberikan nama ketua program studi Arsitektur di FTSP UKRI. Sebaliknya, jawaban kandidat menjelaskan keterbatasannya dan menyarankan cara untuk menemukan informasi tersebut."
+Siapa ketua program studi Teknik Lingkungan di FTSP UKRI?,"Fanny Novia, S.T, M.T.","Ketua program studi Teknik Lingkungan di FTSP UKRI adalah Fanny Novia, S.T, M.T.",TRUE,1.0,BENAR,Jawaban kandidat secara semantik setara dengan jawaban referensi.,"Sebagai chatbot AI, saya tidak memiliki akses real-time ke informasi yang terus berubah seperti jabatan ketua program studi. Informasi ini bisa berubah sewaktu-waktu.
+
+Untuk mengetahui siapa ketua program studi Teknik Lingkungan di FTSP UKRI yang paling *update*, saya sarankan Anda untuk:
+
+*   **Mengunjungi situs web resmi FTSP UKRI:** Cari di situs web FTSP UKRI bagian yang memuat informasi tentang Program Studi Teknik Lingkungan. Biasanya, nama ketua program studi tertera di sana.
+*   **Menghubungi langsung pihak FTSP UKRI:** Anda bisa menghubungi kontak yang tertera di situs web FTSP UKRI (seperti nomor telepon atau email) dan menanyakan langsung kepada staf yang bertugas.
+
+Dengan cara ini, Anda akan mendapatkan informasi yang paling akurat dan terkini.",FALSE,0.0,SALAH,"Jawaban kandidat tidak memberikan jawaban yang tepat, tetapi memberikan saran umum."
+Kapan FTSP UKRI berdiri menurut sambutan dekan?,1985,"Menurut sambutan dekan, FTSP UKRI berdiri sejak tahun 1985.",TRUE,1.0,BENAR,"Jawaban kandidat mengandung informasi yang sama dengan jawaban acuan, yaitu tahun 1985.","Menurut sambutan dekan, Fakultas Teknik Sipil dan Perencanaan (FTSP) UKRI berdiri pada tanggal **15 September 2022**.",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan 15 September 2022, yang berbeda dengan jawaban acuan 1985."
+Apa visi FIKSI UKRI?,Menjadi fakultas unggulan bidang teknologi informasi dan komunikasi (TIK) yang berwawasan kebangsaan dan mempunyai daya saing ditingkat Internasional pada tahun 2026,Visi dari Program Studi Teknik Informatika FIKSI UKRI adalah **Mendidik dan mengembangkan Sumber Daya Manusia yang memiliki keahlian di bidang Teknik Informatika yang mampu berperan aktif dan inovatif terhadap perubahan teknologi informasi.**,FALSE,0.0,SALAH,"Jawaban kandidat memberikan visi program studi Teknik Informatika, bukan visi fakultas (FIKSI) secara keseluruhan.","Sebagai Nara, dengan senang hati saya akan menjawab pertanyaan Anda.
+
+Visi FIKSI UKRI adalah:
+
+**""Menjadi Fakultas yang unggul dan berdaya saing global dalam bidang Komputer dan Informatika yang menghasilkan lulusan berkualitas, berintegritas, dan berjiwa entrepreneur.""**
+
+Secara ringkas, visi ini menekankan pada:
+
+*   **Keunggulan:** FIKSI UKRI ingin menjadi yang terbaik di bidangnya.
+*   **Daya Saing Global:** Lulusan FIKSI UKRI diharapkan mampu bersaing di pasar kerja internasional.
+*   **Kualitas:** FIKSI UKRI berkomitmen untuk menghasilkan lulusan dengan pengetahuan dan keterampilan yang tinggi.
+*   **Integritas:** FIKSI UKRI menjunjung tinggi nilai-nilai kejujuran, etika, dan tanggung jawab.
+*   **Jiwa Entrepreneur:** FIKSI UKRI ingin menumbuhkan semangat kewirausahaan pada mahasiswanya.
+
+Semoga jawaban ini bermanfaat! Jika Anda memiliki pertanyaan lain, jangan ragu untuk bertanya.",FALSE,0.0,SALAH,JAWABAN_KANDIDAT tidak setara dengan JAWABAN_ACUAN. JAWABAN_ACUAN lebih spesifik dan menyebutkan target tahun.
+Berapa jumlah misi yang dimiliki FIKSI UKRI?,4,"Berdasarkan konteks yang diberikan, terdapat dua informasi yang berbeda mengenai jumlah misi FIKSI UKRI.
+
+Pada halaman `fiksi.ukri.ac.id/alumni`, terdapat informasi tentang Fakultas Ilmu Komunikasi dan Sastra (FASOS) UKRI, bukan FIKSI. FASOS UKRI memiliki 5 misi.
+
+Pada halaman `fiksi.ukri.ac.id/`, tidak disebutkan secara eksplisit jumlah misi yang dimiliki FIKSI UKRI.",FALSE,0.0,SALAH,"Jawaban kandidat tidak memberikan jumlah misi FIKSI UKRI, melainkan mendiskusikan informasi yang tidak relevan.","Sebagai Nara, dengan senang hati saya menjawab pertanyaan Anda.
+
+FIKSI UKRI memiliki **3 (tiga) misi**.",FALSE,0.0,SALAH,"Jawaban kandidat menyatakan 3 misi, sedangkan jawaban referensi menyatakan 4 misi. Selain itu, jawaban kandidat bertele-tele."
+Apa visi program studi Sistem Informasi UKRI?,Menjadi Program Studi yang unggul dalam bidang Engineering dan Business Information System yang berlandaskan pada moral dan etika serta berwawasan kebangsaan yang luhur di tingkat Internasional pada tahun 2029,"Error during RAG AI call: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.0-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 200
+}
+, links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, retry_delay {
+  seconds: 23
+}
+]",FALSE,0.013,SALAH,Fallback heuristik (LLM judge gagal).,"Error during Original AI call: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.0-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 200
+}
+, links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, retry_delay {
+  seconds: 23
+}
+]",FALSE,0.013,SALAH,Fallback heuristik (LLM judge gagal).
